@@ -1,0 +1,88 @@
+VALIDATION.JS
+
+function resetForm() {
+  document.getElementById("form_id").reset();
+}
+
+function validateForm() {
+  const form = document.forms["aa"];
+  const name = form["name"].value;
+  const email = form["email"].value;
+  const phone = form["phone"].value;
+
+  if (!name) {
+    alert("Name must be filled out");
+    return false;
+  }
+
+  if (!email.includes("@")) {
+    alert("Email must contain @");
+    return false;
+  }
+
+  if (phone.length !== 10) {
+    alert("Phone number should be 10 digits");
+    return false;
+  }
+
+  alert("Done");
+}
+
+**********************VALIDATION.HTML***************************************
+
+<!doctype html>
+
+<html>  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>
+            Javascript validation
+        </title>
+        <script src="validate.js"></script>
+    </head>
+    <body>
+    <div id="centre">
+        <h1> VALIDATION FORM</h1>
+        <form id="form_id" name="aa">
+            <label for ="name">Name:</label><br><br>
+            <input type="name" name="name"id="username" placeholder="Username" required/> </li><br><br>
+            
+            <label for ="email">Email:</label><br><br>
+            <input type="email" id="email" placeholder="email" required/></li><br><br>
+            <span id="emailError" style="color: red;"></span>
+            
+            <label for ="rollno">Roll No.:</label><br><br>
+            <input type="number" name="rollno" id="rollno" placeholder="Roll No"/></li><br><br>
+            
+            <label for ="phone">Mobile No.:</label><br><br>
+            <input type="number" name="phone" id="number" placeholder="Mobile No" required/></li><br><br>
+            
+            <input id="button" type="button" onclick="newFunction()" value="Reset">
+            <input id="button"type="submit" onclick="validateForm()" value="submit">
+
+        
+        </form>
+    </div>
+    </body>
+    <style>
+        #centre{
+   
+   background-color: rgb(233, 137, 169);
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   
+   }
+   
+   #button{
+       background-color: rgb(166, 207, 52);
+       border-radius: 20px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       text-align: center;
+   }
+   
+    </style>
+</html>
