@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Registration Form</title>  
+</head> 
+<script>    
+  function load() 
+    {     alert("loaded"); 
+    }     
+  function resize() 
+    {     alert("page resized"); 
+    }     
+  function submit() 
+    {     alert("triggered by onclick"); 
+    }     
+  function mouseover() 
+    {     document.body.style.background="orange"; 
+    }  
+  function mouseout() 
+    { 
+    document.body.style.background="pink"; 
+    }     
+  function reset() 
+    { 
+    alert("This form was reset"); 
+    } 
+ 
+</script> 
+<style> 
+  #button{     background-color: rgb(128, 212, 128);  
+}  
+ 
+</style>  
+<body onload="load()" onresize="resize()">      
+<h3>Registration Form</h3>  
+<form onreset="reset()"> 
+ 
+    <label for ="name">Name:</label><br><br>  
+    <input type ="text" required>  
+    <br><br>  
+    <label for ="RN">Roll No.:</label><br><br>  
+    <input type ="text">  
+    <br><br>  
+    <label for ="username">Username:</label><br><br>  
+    <input type ="text">  
+    <br><br>  
+    <label for ="Password">Password:</label><br><br>  
+    <input type ="password" required>  
+    <br><br><br>  
+    <button onclick="submit()" value="click"> Submit</button> <input type="reset"> 
+    <br><br>   
+</form> 
+    <button onmouseover="mouseover()" value="submit"> Mouseover</button> 
+    <button onmouseout="mouseout()" value="submit"> Mouseout</button>  
+</body>  
+</html>  
+
