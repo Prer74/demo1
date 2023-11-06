@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>NAVIGATION BAR</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active">HOME</a>
+        <a>ABOUT</a>
+        <a>SERVICES</a>
+        <a>CONTACT US</a>
+    </div>
+</body>
+</html>
+
+<style>
+.topnav {
+    overflow: hidden;
+    background: yellowgreen;
+    min-height: 952px;
+}
+
+.topnav a {
+    float: left;
+    color: #0e0f0f;
+    text-align: center;
+    padding: 25px 29px;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.topnav a:hover {
+    background-color: #acaca8;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #e6ebe9;
+    color: rgb(13, 13, 13);
+}
+</style>
