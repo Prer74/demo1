@@ -1,0 +1,81 @@
+******app.js*********
+
+import './app.css';
+import Function from './Components/Function'; import Class1 from './Components/Class1';
+import Hook2useState from './Components/Hook2useState'; function App() {
+return (
+<div className="App">
+<>
+
+<Function/>
+<Class1/>
+
+</>
+<header className="App-header">
+<h1>Hello</h1>
+<a
+className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer"
+>
+Learn React
+</a>
+</header>
+</div>
+);
+}
+
+export default App;
+
+***app.css*********************
+.App {
+    text-align: left; background-color: #282c34; color: white;
+    font-size: 20px;
+    padding-top: 200px;
+}
+
+
+
+.App-header {
+
+min-height: 100vh; display: flex;
+flex-direction: column; align-items: center; justify-content: center;
+font-size: calc(10px + 2vmin); color: white;
+}
+
+.App-link { color: #61dafb;
+}
+
+*****************function.js*****************
+import React from "react";
+
+function Function(){ return (
+<div>
+<p><h1>This is function component.</h1></p><br></br>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ul></div>
+
+);
+
+}
+export default Function;
+
+*******************class.js***************
+import React, { Component } from "react";
+
+class Class1 extends Component{ render(){
+return (
+<div>
+<p><h1>This is class component.</h1></p><br></br>
+<ul>
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+</ul>
+</div>
+);
+}
+}
+export default Class1;
+
